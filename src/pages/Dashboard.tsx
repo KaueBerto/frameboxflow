@@ -222,7 +222,7 @@ export default function Dashboard() {
       {/* Cartão de Boas-vindas */}
       <Card className="bg-gradient-hero shadow-lg">
         <CardHeader>
-          <CardTitle className="text-white">Bem-vinda ao FrameBOX! 📸</CardTitle>
+          <CardTitle className="text-white">Bem-vindo ao FrameBOX! 📸</CardTitle>
           <CardDescription className="text-white/80">
             Gerencie seus clientes, agenda e finanças em um só lugar. 
             Sua criatividade merece o melhor sistema de gestão.
