@@ -20,7 +20,8 @@ import {
   FileText, 
   LogOut,
   Camera,
-  Sparkles
+  Sparkles,
+  Briefcase
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { useAuth } from "./AuthWrapper";
@@ -29,6 +30,7 @@ const navigationItems = [
   { title: "Dashboard", url: "/", icon: Home },
   { title: "Controle de Caixa", url: "/caixa", icon: Wallet },
   { title: "Clientes", url: "/clientes", icon: Users },
+  { title: "Serviços", url: "/servicos", icon: Briefcase },
   { title: "Agenda", url: "/agenda", icon: Calendar },
   { title: "Relatórios", url: "/relatorios", icon: FileText },
 ];
