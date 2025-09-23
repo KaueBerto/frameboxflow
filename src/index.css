@@ -2,131 +2,136 @@
 @tailwind components;
 @tailwind utilities;
 
-/* FrameBOX Design System - Photography/Storytelling Management System */
+/* FrameBOX Design System - Sistema de Gestão Fotográfica */
+/* Tema: Branco/Azul - Design limpo e profissional */
 
 @layer base {
   :root {
-    /* Core Background & Text */
-    --background: 0 0% 100%;
-    --foreground: 230 15% 15%;
+    /* === CORES PRINCIPAIS === */
+    /* Background e texto base */
+    --background: 255 255 255; /* Branco puro para fundo principal */
+    --foreground: 15 23 42; /* Azul escuro para texto principal */
 
-    /* Card System */
-    --card: 0 0% 100%;
-    --card-foreground: 230 15% 15%;
+    /* Sistema de cards */
+    --card: 255 255 255; /* Branco para cards */
+    --card-foreground: 15 23 42; /* Azul escuro para texto em cards */
 
-    /* Popover & Modals */
-    --popover: 0 0% 100%;
-    --popover-foreground: 230 15% 15%;
+    /* Popover e modais */
+    --popover: 255 255 255; /* Branco para popovers */
+    --popover-foreground: 15 23 42; /* Azul escuro para texto em popovers */
 
-    /* Primary Brand - Creative Purple */
-    --primary: 270 70% 50%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 270 60% 75%;
-    --primary-dark: 270 80% 35%;
+    /* === CORES PRIMÁRIAS - AZUL === */
+    --primary: 59 130 246; /* Azul vibrante (#3B82F6) */
+    --primary-foreground: 255 255 255; /* Branco para contraste */
+    --primary-light: 147 197 253; /* Azul claro (#93C5FD) */
+    --primary-dark: 29 78 216; /* Azul escuro (#1D4ED8) */
 
-    /* Secondary - Elegant Gold */
-    --secondary: 45 85% 55%;
-    --secondary-foreground: 230 15% 15%;
-    --secondary-light: 45 75% 75%;
+    /* === CORES SECUNDÁRIAS - AZUL ACINZENTADO === */
+    --secondary: 148 163 184; /* Azul acinzentado (#94A3B8) */
+    --secondary-foreground: 15 23 42; /* Azul escuro para contraste */
+    --secondary-light: 203 213 225; /* Azul acinzentado claro (#CBD5E1) */
 
-    /* Muted - Professional Grays */
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 10% 45%;
+    /* === CORES NEUTRAS === */
+    --muted: 248 250 252; /* Azul muito claro para fundos (#F8FAFC) */
+    --muted-foreground: 100 116 139; /* Azul acinzentado para texto secundário (#64748B) */
 
-    /* Accent - Success Green */
-    --accent: 140 70% 45%;
-    --accent-foreground: 0 0% 100%;
+    /* === CORES DE DESTAQUE === */
+    --accent: 59 130 246; /* Azul vibrante para destaques */
+    --accent-foreground: 255 255 255; /* Branco para contraste */
 
-    /* Status Colors */
-    --destructive: 0 75% 55%;
-    --destructive-foreground: 0 0% 100%;
-    --warning: 35 90% 55%;
-    --warning-foreground: 230 15% 15%;
-    --success: 140 70% 45%;
-    --success-foreground: 0 0% 100%;
+    /* === CORES DE STATUS === */
+    --destructive: 239 68 68; /* Vermelho para ações destrutivas (#EF4444) */
+    --destructive-foreground: 255 255 255; /* Branco para contraste */
+    --warning: 245 158 11; /* Amarelo para avisos (#F59E0B) */
+    --warning-foreground: 15 23 42; /* Azul escuro para contraste */
+    --success: 34 197 94; /* Verde para sucesso (#22C55E) */
+    --success-foreground: 255 255 255; /* Branco para contraste */
 
-    /* Interface Elements */
-    --border: 220 15% 90%;
-    --input: 220 15% 95%;
-    --ring: 270 70% 50%;
+    /* === ELEMENTOS DE INTERFACE === */
+    --border: 226 232 240; /* Azul muito claro para bordas (#E2E8F0) */
+    --input: 241 245 249; /* Azul muito claro para inputs (#F1F5F9) */
+    --ring: 59 130 246; /* Azul vibrante para focus ring */
 
-    --radius: 0.75rem;
+    /* === CONFIGURAÇÕES GERAIS === */
+    --radius: 0.5rem; /* Bordas arredondadas padrão */
 
-    /* Gradients */
+    /* === GRADIENTES === */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
     --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
 
-    /* Shadows */
-    --shadow-sm: 0 2px 4px -1px hsl(var(--primary) / 0.1);
-    --shadow-md: 0 4px 6px -1px hsl(var(--primary) / 0.15);
-    --shadow-lg: 0 10px 15px -3px hsl(var(--primary) / 0.2);
-    --shadow-xl: 0 20px 25px -5px hsl(var(--primary) / 0.25);
+    /* === SOMBRAS === */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--primary) / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(var(--primary) / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--primary) / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(var(--primary) / 0.1);
 
-    /* Sidebar Colors */
-    --sidebar-background: 270 15% 8%;
-    --sidebar-foreground: 270 10% 85%;
-    --sidebar-primary: 270 70% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 270 15% 15%;
-    --sidebar-accent-foreground: 270 10% 85%;
-    --sidebar-border: 270 15% 20%;
-    --sidebar-ring: 270 70% 50%;
+    /* === SIDEBAR - TEMA AZUL ESCURO === */
+    --sidebar-background: 15 23 42; /* Azul escuro para sidebar */
+    --sidebar-foreground: 248 250 252; /* Branco azulado para texto */
+    --sidebar-primary: 59 130 246; /* Azul vibrante para elementos ativos */
+    --sidebar-primary-foreground: 255 255 255; /* Branco para contraste */
+    --sidebar-accent: 30 41 59; /* Azul escuro para hover */
+    --sidebar-accent-foreground: 248 250 252; /* Branco azulado para texto hover */
+    --sidebar-border: 51 65 85; /* Azul médio para bordas */
+    --sidebar-ring: 59 130 246; /* Azul vibrante para focus */
 
-    /* Animation Timing */
+    /* === TRANSIÇÕES === */
     --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  /* === TEMA ESCURO === */
   .dark {
-    /* Dark Mode - Professional Night Theme */
-    --background: 230 20% 8%;
-    --foreground: 220 15% 95%;
+    /* Cores invertidas para modo escuro */
+    --background: 15 23 42; /* Azul escuro para fundo */
+    --foreground: 248 250 252; /* Branco azulado para texto */
 
-    --card: 230 18% 12%;
-    --card-foreground: 220 15% 95%;
+    --card: 30 41 59; /* Azul médio para cards */
+    --card-foreground: 248 250 252; /* Branco azulado para texto */
 
-    --popover: 230 18% 12%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 30 41 59; /* Azul médio para popovers */
+    --popover-foreground: 248 250 252; /* Branco azulado para texto */
 
-    --primary: 270 70% 55%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 270 60% 75%;
-    --primary-dark: 270 80% 40%;
+    --primary: 96 165 250; /* Azul mais claro no modo escuro */
+    --primary-foreground: 15 23 42; /* Azul escuro para contraste */
+    --primary-light: 147 197 253; /* Azul claro */
+    --primary-dark: 59 130 246; /* Azul vibrante */
 
-    --secondary: 45 85% 60%;
-    --secondary-foreground: 230 20% 8%;
-    --secondary-light: 45 75% 80%;
+    --secondary: 71 85 105; /* Azul acinzentado escuro */
+    --secondary-foreground: 248 250 252; /* Branco azulado */
+    --secondary-light: 100 116 139; /* Azul acinzentado médio */
 
-    --muted: 230 15% 15%;
-    --muted-foreground: 220 10% 65%;
+    --muted: 51 65 85; /* Azul médio para fundos */
+    --muted-foreground: 148 163 184; /* Azul acinzentado claro para texto */
 
-    --accent: 140 70% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 96 165 250; /* Azul claro para destaques */
+    --accent-foreground: 15 23 42; /* Azul escuro para contraste */
 
-    --destructive: 0 75% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --warning: 35 90% 60%;
-    --warning-foreground: 230 20% 8%;
-    --success: 140 70% 50%;
-    --success-foreground: 0 0% 100%;
+    --destructive: 248 113 113; /* Vermelho mais claro */
+    --destructive-foreground: 15 23 42; /* Azul escuro para contraste */
+    --warning: 251 191 36; /* Amarelo mais claro */
+    --warning-foreground: 15 23 42; /* Azul escuro para contraste */
+    --success: 74 222 128; /* Verde mais claro */
+    --success-foreground: 15 23 42; /* Azul escuro para contraste */
 
-    --border: 230 15% 20%;
-    --input: 230 15% 18%;
-    --ring: 270 70% 55%;
+    --border: 51 65 85; /* Azul médio para bordas */
+    --input: 30 41 59; /* Azul médio para inputs */
+    --ring: 96 165 250; /* Azul claro para focus ring */
 
-    --sidebar-background: 230 25% 6%;
-    --sidebar-foreground: 220 15% 90%;
-    --sidebar-primary: 270 70% 55%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 230 20% 12%;
-    --sidebar-accent-foreground: 220 15% 90%;
-    --sidebar-border: 230 15% 15%;
-    --sidebar-ring: 270 70% 55%;
+    --sidebar-background: 2 6 23; /* Azul muito escuro */
+    --sidebar-foreground: 226 232 240; /* Branco azulado claro */
+    --sidebar-primary: 96 165 250; /* Azul claro */
+    --sidebar-primary-foreground: 15 23 42; /* Azul escuro */
+    --sidebar-accent: 30 41 59; /* Azul médio */
+    --sidebar-accent-foreground: 226 232 240; /* Branco azulado claro */
+    --sidebar-border: 30 41 59; /* Azul médio */
+    --sidebar-ring: 96 165 250; /* Azul claro */
   }
 }
 
+/* === ESTILOS BASE === */
 @layer base {
   * {
     @apply border-border;
@@ -134,5 +139,101 @@
 
   body {
     @apply bg-background text-foreground;
+    /* Fonte otimizada para legibilidade */
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* === SCROLLBAR PERSONALIZADA === */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/30;
+  }
+}
+
+/* === COMPONENTES CUSTOMIZADOS === */
+@layer components {
+  /* Botão com gradiente primário */
+  .btn-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-dark text-primary-foreground;
+    @apply hover:from-primary-dark hover:to-primary transition-all duration-200;
+    @apply shadow-md hover:shadow-lg;
+  }
+
+  /* Card com elevação */
+  .card-elevated {
+    @apply bg-card border border-border rounded-lg shadow-sm;
+    @apply hover:shadow-md transition-shadow duration-200;
+  }
+
+  /* Badge com status */
+  .badge-status {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply badge-status bg-success/10 text-success border border-success/20;
+  }
+
+  .badge-warning {
+    @apply badge-status bg-warning/10 text-warning border border-warning/20;
+  }
+
+  .badge-error {
+    @apply badge-status bg-destructive/10 text-destructive border border-destructive/20;
+  }
+
+  /* Animações suaves */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0; 
+      transform: translateY(10px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+}
+
+/* === UTILITÁRIOS === */
+@layer utilities {
+  /* Texto com gradiente */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
+  }
+
+  /* Foco customizado */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  /* Truncate com tooltip */
+  .truncate-tooltip {
+    @apply truncate cursor-help;
   }
 }
